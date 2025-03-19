@@ -1,44 +1,88 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-</style>
-<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .topnav {
   overflow: hidden;
-  background-color: #e9e9e9;
+  background-color: #333;
 }
+
 .topnav a {
   float: left;
-  display: block;
-  color: black;
+  color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
+
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
+
 .topnav a.active {
-  background-color: #2196F3;
+  background-color: #0505f7;
   color: white;
-}
-.topnav input[type=text] {
-  float: right;
-  padding: 6px;
-  border: none;
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
+
 }
 @media screen and (max-width: 600px) {
   .topnav a, .topnav input[type=text] {
@@ -53,9 +97,9 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     border: 1px solid #ccc;
   }
 }
-  .box {
+.box {
   background-color: lightgrey;
-  width: 300px;
+  max-width: 300px;
   padding: 5px;
   margin: 20px;
 }
@@ -75,27 +119,24 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   float: left;
   overflow: hidden;
 }
-
 .dropdown .dropbtn {
   font-size: 16px;  
   border: none;
   outline: none;
-  color: rgb(44, 42, 42);
+  color: rgb(255, 255, 255);
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
 }
-
   .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
   z-index: 1;
 }
-
 .dropdown-content a {
   float: none;
   color: black;
@@ -110,90 +151,79 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 .dropdown:hover .dropdown-content {
   display: block;
 }  
+a:hover {
+  background-color: gray;
+  font-size: 18px;
+}
+.container { 
+    height: 200px;
+    position: relative;
+  }
   </style>
+</style>
 </head>
-<body class="w3-light-grey">
-<div class="w3-content" style="max-width:1400px">
-<header class="w3-container w3-center w3-padding-32"> 
-  <h1><b>WEB LINK BÀI</b></h1>
-  <div class="topnav">
-    <a class="active" href="#home">TEST</a>
+<head><div class="topnav">
+    <a class="active" href="#test">Home</a>
+    <a href="#test">TEST</a>
+    <a href="#test">TEST</a>
+    <a href="#test">TEST</a>
     <div class="dropdown">
-      <button class="dropbtn">nav bar test▾
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">chưa làm</a>
-        <a href="#">chưa làm</a>
-        <a href="#">chưa làm</a>
+        <button class="dropbtn">Dropdown test</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
       </div>
-    </div>
-    <input type="text" placeholder="Search..">
   </div>
-</header>
-<div class="w3-row">
-<div class="w3-col l8 s12">
-  <div class="w3-card-4 w3-margin w3-white">
-    <img src="https://preview.redd.it/armored-core-hangar-artwork-wallpaper-full-res-v0-4igvb99fj4eb1.jpg?width=1080&crop=smart&auto=webp&s=60660c3e97c7f7017658dfde74e27f1aa71c1c6e" alt="armored core" style="width:100%">
-    <div class="w3-container">
-      <h3><b>tôi</b></h3>
-      <h5>trần minh tú</h5>
-    </div>
-    <div class="w3-container">
-      <p>sở thích cá nhân</p>
-      <p>game và code</p>
-      <div class="w3-row">
-      </div>
-    </div>
-  </div>
-  <hr>
+</head>
+<body>
+<div class="header">
+  <h2>WEB LINK BAI</h2>
 </div>
-<div class="w3-col l4">
-  <div class="w3-card w3-margin w3-margin-top">
-  <img src="https://i.kym-cdn.com/photos/images/newsfeed/002/638/553/929.jpg" style="width:100%">
-    <div class="w3-container w3-white">
-      <h4><b>CÁI GÌ ĐÓ</b></h4>
-      <p>CHỮ.</p>
-      <P>LINK BÀI TẬP Ở DƯỚI KHUNG NÀY</P>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>ME</h2>
+      <img src="https://preview.redd.it/armored-core-hangar-artwork-wallpaper-full-res-v0-4igvb99fj4eb1.jpg?width=1080&crop=smart&auto=webp&s=60660c3e97c7f7017658dfde74e27f1aa71c1c6e" alt="armored core" style="width:100%">
+      <p>Some text..</p>
+      <p>RANDOM BULLSH*T GO</p>
     </div>
-  </div><hr>
-  <div class="w3-card w3-margin">
-    <div class="w3-container w3-padding">
-      <h4>LINK bài</h4>
+    <div class="card">
+      <h2>RANDOM BULLSH*T GO</h2>
+      <img src="https://i.kym-cdn.com/photos/images/newsfeed/002/638/553/929.jpg" style="width:100%">
+      <p>MEH</p>
+      <p>có ai thực sự đọc cá này không?</p>
     </div>
-    <ul class="w3-ul w3-hoverable w3-white">
-      <li class="w3-padding-16">
-        <p class="box"><a href="https://abcs321.github.io/b1-m3/">b1-m3</a></p>
-        <p class="box"><a href="https://abcs321.github.io/b2-bao-moi/">b2-bao-moi</a></p>
-        <p class="box"><a href="https://abcs321.github.io/bai-4/">b̶1̶m̶e̶n̶u̶n̶g̶a̶n̶g̶d̶ọc̶  bài cũ </a></p>
-        <p class="box"><a href="https://abcs321.github.io/genk/">b̶1̶g̶e̶n̶k̶ bài cũ</a></p>
-        <p class="box"><a href="https://abcs321.github.io/lotus/">b̶2̶L̶O̶T̶U̶S̶ bài cũ</a></p>
-        <p class="box"><a href="https://abcs321.github.io/hover-b3/">B̶A̶I̶3̶ bài cũ</a></p>
-      </li> 
-    </ul>
   </div>
-  <hr> 
-  <div class="w3-card w3-margin">
-    <div class="w3-container w3-padding">
-      <h4>ĐẸP</h4>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <img src="https://onmyojicltl.wordpress.com/wp-content/uploads/2024/02/image-2.png?w=1024" alt="miku" style="width:100%">
+        <div class="container">
+          <div class="center">
+            <a href="https://www.facebook.com/thanh.nho.35380/?locale=vi_VN">
+              <button class="w3-button w3-black w3-padding-large w3-margin-bottom">FACEBOOK LINK</button>
+            </a>
+          </div>
+        </div>
     </div>
-    <div class="w3-container w3-white">
-    <p><span class="w3-tag w3-black w3-margin-bottom">FUTURE PLANS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">FACEBOOK</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">GAME</span>
-    </p>
+    <div class="card">
+        <h3>bài mới</h3>
+        <ul class="hover">
+            <p class="box"><a href="https://abcs321.github.io/b1-m3/">b1-m3</a></p>
+            <p class="box"><a href="https://abcs321.github.io/b2-bao-moi/">b2-bao-moi</a></p>
+        </ul>
+    </div>
+    <div class="card">
+      <h3>bài cũ</h3>
+      <p class="box">
+        <a href="https://abcs321.github.io/bai-4/">b̶1̶m̶e̶n̶u̶n̶g̶a̶n̶g̶d̶ọc̶</a></p>
+        <p class="box"><a href="https://abcs321.github.io/genk/">b̶1̶g̶e̶n̶k̶</a></p>
+        <p class="box"><a href="https://abcs321.github.io/lotus/">b̶2̶L̶O̶T̶U̶S̶</a></p>
+        <p class="box"><a href="https://abcs321.github.io/hover-b3/">B̶A̶I̶3̶</a></p> 
     </div>
   </div>
 </div>
-</div><br>
-</div>
-<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-  <div class="container">
-    <div class="center">
-      <a href="https://www.facebook.com">
-        <button class="w3-button w3-black w3-padding-large w3-margin-bottom">FACEBOOK LINK</button>
-      </a>
-    </div>
-  </div>
-</footer>
 </body>
 </html>
