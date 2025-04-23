@@ -159,6 +159,17 @@ a:hover {
     height: 200px;
     position: relative;
   }
+  .fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
   </style>
 </style>
 </head>
@@ -273,5 +284,27 @@ a:hover {
     </ul>
 </div>
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    cards.forEach(card => {
+      card.classList.add('fade-in');
+      observer.observe(card);
+    });
+  });
+</script>
+
 </body>
 </html>
